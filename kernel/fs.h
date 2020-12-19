@@ -1,3 +1,7 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // On-disk file system format.
 // Both the kernel and user programs use this header file.
 
@@ -58,3 +62,6 @@ struct dirent {
   char name[DIRSIZ];
 };
 
+#ifdef __cplusplus
+}
+#endif

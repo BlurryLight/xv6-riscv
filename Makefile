@@ -51,6 +51,7 @@ endif
 QEMU = qemu-system-riscv64
 
 CC = $(TOOLPREFIX)gcc
+CXX = $(TOOLPREFIX)g++
 AS = $(TOOLPREFIX)gas
 LD = $(TOOLPREFIX)ld
 OBJCOPY = $(TOOLPREFIX)objcopy
@@ -71,6 +72,7 @@ ifneq ($(shell $(CC) -dumpspecs 2>/dev/null | grep -e '[^f]nopie'),)
 CFLAGS += -fno-pie -nopie
 endif
 
+CXXFLAGS = $(CFLAGS) -Wno-write-strings
 LDFLAGS = -z max-page-size=4096
 
 $K/kernel: $(OBJS) $K/kernel.ld $U/initcode

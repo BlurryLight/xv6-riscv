@@ -1,3 +1,7 @@
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 // Format of an ELF executable file
 
 #define ELF_MAGIC 0x464C457FU  // "\x7FELF" in little endian
@@ -40,3 +44,7 @@ struct proghdr {
 #define ELF_PROG_FLAG_EXEC      1
 #define ELF_PROG_FLAG_WRITE     2
 #define ELF_PROG_FLAG_READ      4
+
+#ifdef __cplusplus
+}
+#endif

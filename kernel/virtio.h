@@ -1,3 +1,6 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
 //
 // virtio device definitions.
 // for both the mmio interface, and virtio descriptors.
@@ -92,3 +95,7 @@ struct virtio_blk_req {
   uint32 reserved;
   uint64 sector;
 };
+
+#ifdef __cplusplus
+}
+#endif

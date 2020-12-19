@@ -1,3 +1,6 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
 struct stat;
 struct rtcdate;
 
@@ -40,3 +43,7 @@ void free(void*);
 int atoi(const char*);
 int memcmp(const void *, const void *, uint);
 void *memcpy(void *, const void *, uint);
+
+#ifdef __cplusplus
+}
+#endif
